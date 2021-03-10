@@ -1,5 +1,8 @@
 # vuex-tuto
 
+Suivi et inspiration du tutoriel: https://www.youtube.com/watch?v=nFh7-HfODYY&t=705s
+Afin de découvrir VueX le gestionnaire d'état de Vue.js version 3.
+
 ## Project setup
 ```
 npm install
