@@ -4,7 +4,7 @@
             <router-link to="/">Home</router-link>
             <router-link to="/todos">Todos</router-link>
         </div>
-        <img alt="vue js logo" src="../assets/logo.png"/>
+        <img alt="vue js logo" src="../../assets/logo.png"/>
     </div>
 </template>
 <script>

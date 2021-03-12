@@ -3,7 +3,7 @@ import axios from 'axios'
 const counter = {
     state: () => ({
         counter: 0,
-        colorCode: '#fff'
+        colorCode: 'rgba(255,0,20,0.7)'
     }),
 
     getters: { // get and modify data from the store to get in components but don't modify data in state

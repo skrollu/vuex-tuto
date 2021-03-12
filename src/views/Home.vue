@@ -8,16 +8,16 @@
 </template>
 <script>
 
-import Counter from '../components/Counter'
-import CounterSquared from '../components/CounterSquared'
+import Counter from '../components/counter/Counter'
+import CounterSquared from '../components/counter/CounterSquared'
 
 export default {
     name: 'Home',
     components: {
         Counter,
         CounterSquared,
-        'buttons': require('@/components/Buttons.vue').default, //different way of import,
-        'CoLoR-Inpput': require('@/components/Color-Input.vue').default
+        'buttons': require('@/components/counter/Buttons.vue').default, //different way of import,
+        'CoLoR-Inpput': require('@/components/counter/Color-Input.vue').default
     },
 }
 
