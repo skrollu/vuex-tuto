@@ -1,6 +1,7 @@
 # vuex-tuto
 
-Suivi et inspiration du tutoriel: https://www.youtube.com/watch?v=nFh7-HfODYY&t=705s
+Suivi et inspiration du tutoriel counter: https://www.youtube.com/watch?v=nFh7-HfODYY&t=705s
+et du tuto todos: https://www.youtube.com/watch?v=5lVQgZzLMHc&t=794s
 Afin de découvrir VueX le gestionnaire d'état de Vue.js version 3.
 
 ## Project setup

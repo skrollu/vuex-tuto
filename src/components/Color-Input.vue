@@ -14,7 +14,7 @@ export default {
     computed: {
         colorCode: {
             get() {
-                return this.$store.state.colorCode
+                return this.$store.state.counter.colorCode
             },
             set(newValue){
                 this.$store.dispatch('setColorCode', newValue)

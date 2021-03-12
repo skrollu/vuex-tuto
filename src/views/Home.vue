@@ -1,6 +1,5 @@
 <template lang="">
-    <div class="home">
-        <img alt="vue js logo" src="../assets/logo.png"/>
+    <div class="home">            
         <Counter />
         <CounterSquared />
         <buttons />
@@ -8,6 +7,7 @@
     </div>
 </template>
 <script>
+
 import Counter from '../components/Counter'
 import CounterSquared from '../components/CounterSquared'
 
@@ -24,7 +24,7 @@ export default {
 </script>
 <style>
     .home {
-        margin-top: 150px;
+        margin-top: 50px;
     }
 
     .counter {
