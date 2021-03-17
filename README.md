@@ -2,6 +2,8 @@
 
 This project is inspired by the vuex counter tutorial: https://www.youtube.com/watch?v=nFh7-HfODYY&t=705s
 and vuex todos: https://www.youtube.com/watch?v=5lVQgZzLMHc&t=794s
+and Slider component: https://www.youtube.com/watch?v=YAhCVgKcis4
+
 With those I discovered VueX version 3.
 
 # Launch the project

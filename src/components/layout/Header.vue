@@ -5,7 +5,7 @@
             <router-link to="/todos">Todos</router-link>
             <router-link to="/sliders">Sliders</router-link>
         </div>
-        <img alt="vue js logo" src="../../assets/images/logo.png"/>
+        <img alt="vue js logo" src="../../assets/images/vue_logo.png"/>
     </div>
 </template>
 <script>
@@ -13,7 +13,7 @@ export default {
     name: 'Header'
 }
 </script>
-<style>
+<style scoped>
     .header {
         text-align: center;
     }

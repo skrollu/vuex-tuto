@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="todos-container">
         <AddTodo />
         <FilterTodos />
          <div class="legend">
@@ -48,6 +48,11 @@ export default {
 }
 </script>
 <style scoped>
+   
+   .todos-container {
+       margin: 0 100px;
+   }
+
         .todos {
     display: grid;
     grid-template-columns: repeat(3, 1fr);

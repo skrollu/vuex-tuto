@@ -1,60 +1,111 @@
 <template >
     <div class="sliders">
-        <video src="../assets/videos/sport.mp4" autoplay muted loop></video>
-        <div class="sport-titles">
-            <span class="sport-title">Unlimited</span>
-            <span class="sport-title">Power</span>
-            <span class="sport-title">Now</span>
+        <button @click="prev" type="button" class="btn btn-left">
+            <!-- &#x3008; -->
+            <img src="../assets/images/chevron-left.svg" class="icone">
+        </button>
+        <div class="container-slides" :style="{transform: `translateX(${index}px)`, transition: `${transition}`}">
+            <img class="img-slider" src="../assets/images/paysage.jpeg">
+            <img class="img-slider" src="../assets/images/vue_logo.png">
+            <img class="img-slider" src="../assets/images/react_logo.png">
+            <img class="img-slider" src="../assets/images/angular_logo.png">
         </div>
+        <button @click="next" type="button" class="btn btn-right">
+            <!-- &#x3009; -->
+            <img src="../assets/images/chevron-right.svg" class="icone">
+        </button>
     </div>
 </template>
 <script>
 export default {
-    
+    name: 'Sliders',
+    data: function() {
+        return {
+            index: 0,
+            transition: "transform 0.2s ease"
+        }
+    },
+    methods: {
+        next(){
+            if(this.index === -1500) {
+                this.transition = "none";
+                this.index = 0;
+            } else {
+                this.index -= 500;
+                this.transition = "transform 0.2s ease";
+            }
+        },
+        prev(){
+            if(this.index === 0) {
+                this.transition = "none";
+                this.index = -1500;
+            } else {
+                this.index += 500;
+                this.transition = "transform 0.2s ease";
+            }
+        }
+    }
 }
 </script>
 <style scoped>
+button {
+    display: none;
+}
     .sliders {
+        width: 500px;
+        height: 300px;
+        margin: 100px auto 0;/* top left/rigth bot */
+        background: black;
+        overflow: hidden;
         position: relative;
-        margin: auto;
     }
 
-    .sport-titles {
-        margin: 150px;
-        position: absolute;
-        font-family: sans-serif;
+    .container-slides {
+        height: 100%;
+        width: 100%;
         display: flex;
-        flex-direction: column;
-        align-items: flex-start;
     }
 
-    video {
+    .img-slider {
+        height: 300px;
+        width: 500px;
+    }
+
+    .btn {
+        outline: none;
+        border: none;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: block;
         position: absolute;
-        height: 80vh;
-        width: 100vw;
-        object-fit: cover;
-        top: 0;
-        bottom: 0;
-        right: 0;
-        left: 0;
+        z-index: 1000;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /*font-size: 50px;*/
+        transition: background-color 0.3s ease;
     }
 
-    .sport-title {
-        font-size: 200px;
-        font-weight:900;
-        line-height: 1;
-        -webkit-text-stroke: 2px #222;
-        background-clip: text;
-        -webkit-background-clip: text;
-        background-image: linear-gradient(to bottom, transparent 50%, black 50%);
-        color: transparent;
-        margin-left: 100px;
-        transition: background-position ease-out 0.4s;
-        background-size: 1% 200%;
+    .btn:hover {
+        background-color: rgba(255, 255, 255, 0.452);
     }
 
-    .sport-title:hover {
-        background-position: 0 +100%;
+    .icone {
+        width: 15px;
+    }
+
+    .btn-left {
+        top: 50%;
+        left: 5px;
+        transform: translateY(-50%);
+    }
+
+    .btn-right {
+        top: 50%;
+        right: 5px;
+        transform: translateY(-50%);
     }
 
 </style>
