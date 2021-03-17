@@ -25,6 +25,11 @@ export default {
 <style>
     .home {
         margin-top: 50px;
+        max-width: 1100px;
+        margin: auto;
+        overflow: auto;
+        padding: 0 2rem;
+        text-align:center;
     }
 
     .counter {

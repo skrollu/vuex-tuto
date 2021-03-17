@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home'
 import Todos from '../views/Todos'
+import Sliders from '../views/Sliders'
 
 const routes = [
   {
@@ -12,6 +13,11 @@ const routes = [
     path: '/todos',
     name: 'Todos',
     component: Todos,
+  },
+  {
+    path: '/sliders',
+    name: 'Sliders',
+    component: Sliders,
   },
 ]
 
