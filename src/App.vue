@@ -17,12 +17,15 @@ export default {
 </script>
 
 <style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 #app {
   height: 100vh;
 }
 html, body{
-  padding: 0;
-  margin: 0;
   height: 100%;
 }
 body {

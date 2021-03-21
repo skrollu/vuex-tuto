@@ -6,7 +6,7 @@
         </button>
         <div class="container-slides" :style="{transform: `translateX(${index}px)`, transition: `${transition}`}">
             <div class="container-card" v-for="(item, index) in paysages" :key="index">
-                <Card :id="item.id" :title='item.title' :img='item.cover_picture' />
+                <Card :data="item" :height="heightCard" :width="widthCard" />
             </div>
         </div>
         <button @click="next" type="button" class="btn btn-right">
@@ -30,7 +30,9 @@ export default {
     data: function() {
         return {
             index: 0,
-            transition: "transform 0.2s ease"
+            transition: "transform 0.2s ease",
+            widthCard: 200,
+            heightCard: 250
         }
     },
     methods: {
@@ -58,7 +60,7 @@ export default {
 <style scoped>
     .card-slider {
         height: 300px;
-        width: 600px;
+        width: 1000px;
         margin: 100px auto 0;/* top left/rigth bot */
         background: rgb(27, 31, 30);
         overflow: hidden;
@@ -66,9 +68,11 @@ export default {
     }
 
     .container-slides {
+        margin: 0 60px;
         height: 100%;
         width: 100%;
         display: flex;
+        align-items: center;
     }
 
     .container-card {

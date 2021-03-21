@@ -1,51 +1,39 @@
 <template lang="">
-    <div :id="id" class="card">
-        <img :src="img" :alt="title">
-        <h3>{{title}}</h3>
+    <div :id="data.id" class="card" :style="{ height: `${height}px`, width: `${width}px` }">
+        <div class="card-back" :style="{ height: `${height}px`, width: `${width}px` }">
+            <img :src="data.cover_picture" :alt="data.title" :style="{ height: `${height}px`, width: `${width}px` }">
+        </div>
+        <div class="card-front">
+            <h3>{{data.title}}</h3>
+        </div>
     </div>
 </template>
 <script>
 export default {
     name:'Card',
     props: {
-        id: Number,
-        img: Object,
-        title: String,
+        data: Object,
+        width: Number,
+        height: Number,
     }
 }
 </script>
 <style scoped>
     .card {
-        position: relative;
-        display: flex;
-        z-index: 0;
-        height: 250px;
-        width: 200px;
-        border: 1px gray solid;
-        border-radius: 50px;
+        border: 3px white solid;
+        border-radius: 20px;
         overflow: hidden;
     }
 
-    img {
-        position: absolute;
-        z-index: 1;
+    .card-front {
+        text-align: center;
+        color: white;
+        height: 100px;
+        background-color: rgba(83, 83, 83, 0.24);
+        transition: transform 0.4s;
     }
 
-    h3 {
-        position: absolute;
-        z-index: 2;
-        opacity: 0;
-        transform: translateY(50px);
-    }
-
-    .card:hover h3{
-        animation: card_hover forwards 0.3s;
-    }
-
-    @keyframes card_hover {
-        100% {
-            opacity: 1;
-            transform: none,
-        }
+    .card:hover .card-front{
+        transform: translateY(-50px);
     }
 </style>
